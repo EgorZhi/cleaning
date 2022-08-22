@@ -1,0 +1,107 @@
+// Стили для модуля всплывающих окон
+
+.popup {
+	// Свойства для всего экрана (затемнение, позиционировние)
+	position: fixed;
+	width: 100%;
+	height: 100%;
+	top: 0;
+	left: 0;
+	// Позиционируем поверх прочих окон
+	z-index: 7;
+	// Затемняющий задний фон
+	background-color: rgba(0, 0, 0, 0.8);
+	// Скрыть с помощью diplay: none не получится,
+	// т.к. это свойство мы не сможем анимировать
+	// ВКЛЮЧАЕМ СКРОЛЛ ПО ОСИ-Y, ЕСЛИ БЛОК ВЫШЕ ЧЕМ ВЫСОТА ЭКРАНА
+	overflow-y: auto;
+	overflow-x: hidden;
+	// АНИМИРУЕМ POPUP
+	// Скрываем POPUP
+	opacity: 0;
+	visibility: hidden;
+	// ПЛАВНОЕ ПОЯВЛЕНИЕ И ИСЧЕЗАНИЕ
+	transition: all 0.8s ease 0s;
+
+	// Открываем POPUP при клике на кнопку с 
+	// <a href="#popup" class=""></a>
+	// &:target - ЕСЛИ ИСПОЛЬЗУЕМ ВАРИАНТ С CSS
+	// .OPEN - ЕСЛИ ИСПОЛЬЗУЕМ ВАРИАНТ С JS
+	&.open{
+		opacity: 1;
+		visibility: visible;
+		// АНИМИРУЕМ POPUP
+		// ПЛАВНОЕ ПОЯВЛЕНИЕ И ИСЧЕЗАНИЕ БЛОКА СВЕРХУ ЭКРАНА
+		// ВОССТАНОВЛЕНИЕ
+		.popup__content {
+			transform: translate(0px,0px);
+			opacity: 1;
+			//ТРАНСФОРМАЦИЯ С ПЕРСПЕКТИВОЙ
+			// transform: perspective(600px) translate(0px, 0px) rotateX(0);
+		}
+	}
+	// .popup__area
+	// ДЛЯ ЗАКРЫТИЕ POPUP ПРИ КЛИКЕ НА ЗАТЕМНЕННУЮ ОБЛАСТЬ
+	// ССЫЛКА НАКЛАДЫВАЕТСЯ НА ЗАТЕМНЕННУЮ ОБЛАСТЬ
+	&__area {
+		position: absolute;
+		width: 100%;
+		height: 100%;
+		top: 0;
+		left: 0;
+	}
+	// .popup__body
+	&__body {
+		min-height: 100%;
+		// Центруем тело POPUP по центру экрана
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		// отступы безопасности, чтобы контент не прилипал к краям
+		// от краев экрана до блока POPUP
+		padding: 30px 10px;
+	}
+	// .popup__content
+	// Контентная часть
+	&__content {
+		background-color: #fff;
+		color: #000;
+		// Максимальная ширина POPUP
+		max-width: 800px;
+		// Отступы безопасности внутри блока POPUP
+		padding: 30px; 
+		// Относительное позиционирование для того чтобы 
+		// абсолютно отпозиционировать закрывающий крестик
+		position: relative;
+		// АНИМИРУЕМ POPUP
+		// ПЛАВНОЕ ПОЯВЛЕНИЕ И ИСЧЕЗАНИЕ БЛОКА СВЕРХУ ЭКРАНА
+		// ИСЧЕЗАНИЕ
+		transition: all 0.8s ease 0s;
+		opacity: 0;
+		transform: translate(0px, -100%);
+		//ТРАНСФОРМАЦИЯ С ПЕРСПЕКТИВОЙ
+		// transform: perspective(600px) translate(0px, -100%) rotateX(45deg);
+	}
+	// .popup__close
+	&__close {
+		// Позиционируем абсолютно относительно
+		// блока popup__content
+		position: absolute;
+		right: 10px;
+		top: 10px;
+		color: #000;
+		text-decoration: none;
+	}
+	// .popup__title
+	&__title {
+		font-size: 40px;
+		margin: 0 0 1em 0;
+	}
+	// .popup__text
+	&__text {
+	}
+}
+.close-popup {
+}
+.popup-link {
+}
