@@ -138,7 +138,7 @@ import "./files/burger.js";
 // Плавная навигация по странице до нужного блока + кнопка "Scroll To Top" (МОЯ)
 // Документация: https://proverstka.com.ua/blog/plavnaya-prokrutka-v-lyuboe-mesto-stranicy/
 // Реализация на JQuery
-// import "./files/scroll/scroll-to.js";
+import "./files/scroll/scroll-to.js";
 
 // Анимация блоков при прокрутке страницы
 // Документация: https://www.youtube.com/watch?v=kupwmF72Plo

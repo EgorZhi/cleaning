@@ -206,26 +206,6 @@ body {
 	}
 	// .cleaning-home__call
 	&__call {
-		// @media (max-width:$mobile){
-		// 	background-color: $blue; 
-		// 	border-radius: 14px;
-		// 	color: $white;
-		// 	padding: 10px 0px 5px 15px;
-
-		// 	display: inline-grid;
-		// 	grid-template: auto auto / 30px 1fr;
-		// 	max-width: 290px;
-		// 	column-gap: 16px;
-		// 	.cleaning-home__value {
-		// 		color: $white;
-		// 	}
-		// 	.cleaning-home__phone {
-		// 		color: $white;
-		// 	}
-		// 	.svg-call-dims {
-		// 		border: none;
-		// 	}
-		// }
 	}
 	// .cleaning-home__item
 	&__item {
@@ -289,7 +269,6 @@ body {
 	background-color: $white;
 	border: 1px solid #DCDDEB;
 	border-radius: 50%;
-	border-color: #DCDDEB;
 	padding: 15px;
 }
 .call-us {
@@ -308,6 +287,16 @@ body {
 	// .page__service
 	&__service {
 		margin-bottom: 481px;
+		background-color: $white;
+			@media (max-width:$tablet){
+				margin-bottom: 150px;
+			}
+			@media (max-width:$mobile){
+				margin-bottom: 80px;
+			}
+			@media (max-width:$mobileSmall){
+				margin-bottom: 60px;
+			}
 	}
 }
 .service {
@@ -321,6 +310,9 @@ body {
 		margin-bottom: 64px;
 		margin-left: auto;
 		margin-right: auto;
+		& > *:not(:last-child) {
+			margin: 0 0 21px 0;
+		}
 		@media (max-width:$mobile){
 			margin-bottom: 42px;
 		}
@@ -395,9 +387,6 @@ body {
 .header-block {
 	text-align: center;
 	max-width: 644px;
-	& > *:not(:last-child) {
-        margin: 0 0 21px 0;
-    }
 	// .header-block__title
 	&__title {
 		font-style: normal;
@@ -406,6 +395,12 @@ body {
 		line-height: 121%;
 		text-align: center;
 		color: inherit;
+		margin: 0;
+		&_left {
+			@media (max-width:$mobile){
+				margin-bottom: 15px; 
+			}			
+		}
 		@media (max-width:$mobile){
 			font-size: 36px; 
 		}
@@ -428,8 +423,295 @@ body {
 //</OUR SERVICE >========================================================================================================================================================
 
 //<BENEFITS>========================================================================================================================================================
+.page {
+	// .page__benefits
+	&__benefits {
+		margin-bottom: 481px;
+		background-color: $white;
+		@media (max-width:$tablet){
+			margin-bottom: 150px;
+		}
+		@media (max-width:$mobile){
+			margin-bottom: 80px;
+		}
+		@media (max-width:$mobileSmall){
+			margin-bottom: 60px;
+		}
+	}
+}
+.benefits {
+	background-color: $white;
+	// .benefits__container
+	&__container {
+	}
+	// .benefits__header
+	&__header {
+		margin: 0 auto;
+		margin-bottom: 32px;
+		& > *:not(:last-child) {
+			margin: 0 0 21px 0;
+		}
+	}
+	// .benefits__body
+	&__body {
+		margin-bottom: 40px;
+		max-width: 750px;
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: space-between;
+		margin-left: auto;
+		margin-right: auto;
+	}
+	// .benefits__item
+	&__item {
+		display: inline-grid;
+		column-gap: 16px;
+		grid-template: auto auto / 72px 1fr;
+		align-items: center;
+		@media (max-width: $tablet) {
+			padding: 15px 0;
+		}
+		@media (max-width: $mobile) {
+			grid-template: auto auto / 60px 1fr;
+		}
+	}
+	// .benefits__icon
+	&__icon {
+		text-align: center;
+		align-self: center;
+		grid-row: span 2;
+		@media (max-width: $mobile) {
+			// padding: 0px 15px 0px 0px;
+		}
+	}
+	// .benefits__title
+	&__title {
+		font-style: normal;
+		font-weight: 400;
+		font-size: 16px;
+		line-height: 112%;
+		letter-spacing: 1.6px;
+		text-transform: uppercase;
+		color: $lightBlue;
+		margin: 0;
+	}
+	// .benefits__text
+	&__text {
+		font-style: normal;
+		font-weight: 700;
+		font-size: 28px;
+		line-height: 129%;
+		color: inherit;
+	}
+	// .benefits__video
+	&__video {
+		margin: 0 auto;
+		max-width: 1012px;
+		position: relative;
+		padding: 0px 0px 47% 0px;
+		iframe {
+			position: absolute;
+			width: 100%;
+			height: 100%;
+			top: 0;
+			left: 0;
+			object-fit: cover;
+		}
+	}
+}
+.header-block {
+	// .header-block__title
+	&__title {
+	}
+	// .header-block__sub-title
+	&__sub-title {
+	}
+}
+.svg-clients-dims,
+.svg-jobs-dims,
+.svg-уmployees-dims {
+	background-color: $white;
+	border: 1px solid #DCDDEB;
+	border-radius: 50%;
+	padding: 15px;
+}
 
 //</BENEFITS>========================================================================================================================================================
+
+//<PROFESSIONAL>========================================================================================================================================================
+.page {
+	// .page__professional
+	&__professional {
+		margin-bottom: 240px;
+		background-color: $white;
+		@media (max-width:$tablet){
+			margin-bottom: 150px;
+		}
+		@media (max-width:$mobile){
+			margin-bottom: 80px;
+		}
+		@media (max-width:$mobileSmall){
+			margin-bottom: 60px;
+		}
+	}
+}
+.professional {
+	// .professional__container
+	&__container {
+	}
+	// .professional__header
+	&__header {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		flex-wrap: wrap;
+		margin-bottom: 48px;
+		@media (max-width:$mobile){
+			 margin-bottom: 15px; 
+		}
+	}
+	// .professional__body
+	&__body {
+		display: flex;
+		justify-content: center;
+		align-items: end;
+		gap: 28px;
+		@media (max-width:$tablet){
+			 flex-wrap: wrap; 
+		}
+	}
+	// .professional__item
+	&__item {
+		flex: 0 1 33.333%;
+		padding: 0 38px 29px 38px;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		@media (max-width:$tablet){
+			flex: 0 1 48%;
+		}
+		@media (max-width:$mobile){
+			flex: 1 1 100%;
+		}
+	}
+	// .professional__icon
+	&__icon {
+		margin-bottom: 24px;
+	}
+	// .professional__value
+	&__value {
+		font-style: normal;
+		font-weight: 700;
+		font-size: 24px;
+		line-height: 142%;
+		text-align: center;
+		color: inherit;
+		margin-bottom: 13px;
+	}
+	// .professional__text
+	&__text {
+		font-style: normal;
+		font-weight: 400;
+		font-size: 21px;
+		line-height: 143%;
+		text-align: center;
+		color: $lightBlue;
+	}
+}
+.header-block {
+	// .header-block_left
+	&_left {
+		max-width: none;
+	}
+	// .header-block__title
+	&__title {
+		&_left {
+			max-width: 475px;
+			text-align: left;
+		}
+	}
+	// .header-block__button
+	&__button {
+		@media (max-width:$mobileSmall){
+			 flex: 1 1 100%; 
+		}
+	}
+}
+//</PROFESSIONAL>========================================================================================================================================================
+
+//<AREAS>========================================================================================================================================================
+
+//</AREAS>========================================================================================================================================================
+
+//<COVD>========================================================================================================================================================
+.page {
+	// .page__covid
+	&__covid {
+	}
+}
+.covid {
+	background-image: url('@img/covid/covid-background.jpg');
+	background-color: #211F54; /* Цвет фона */
+	background-position: center;
+	background-size: cover;
+	background-repeat: no-repeat;
+	border-radius: 24px;
+	// .covid__container
+	&__container {
+	}
+	// .covid__body
+	&__body {
+		position: absolute;
+		left: 50%;
+		transform: translateX(-50%); //либо translate(X,Y);
+
+		padding: 138 0px 138 74px;
+		position: relative;
+		z-index: 2;
+		max-width: 562px;
+		@media (max-width:$mobile){
+			padding: 170px 0px 80px 0px;
+			max-width: 450px;
+		}
+		@media (max-width:$mobileSmall){
+			padding: 120px 0px 40px 0px; 
+		}
+	}
+	// .covid__title
+	&__title {
+	}
+	// .covid__text
+	&__text {
+	}
+	// .covid__buttons
+	&__buttons {
+	}
+	// .covid__button
+	&__button {
+	}
+	// .covid__call
+	&__call {
+	}
+	// .covid__value
+	&__value {
+	}
+	// .covid__phone
+	&__phone {
+	}
+}
+.button-quote {
+}
+.call-us {
+}
+.cleaning-home {
+	// .cleaning-home__icon
+	&__icon {
+	}
+}
+.svg-call-dims {
+}
+
+//</COVD>========================================================================================================================================================
 
 //</ОСНОВНОЙ БЛОК>==============================================================================================================================================================================================================================================================================================
 
