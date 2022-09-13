@@ -647,6 +647,16 @@ body {
 .page {
 	// .page__covid
 	&__covid {
+		margin-bottom: 200px;
+		@media (max-width:$tablet){
+			margin-bottom: 150px;
+		}
+		@media (max-width:$mobile){
+			margin-bottom: 80px;
+		}
+		@media (max-width:$mobileSmall){
+			margin-bottom: 60px;
+		}
 	}
 }
 .covid {
@@ -656,35 +666,74 @@ body {
 	background-size: cover;
 	background-repeat: no-repeat;
 	border-radius: 24px;
+	position: relative;
+	@media (max-width:$mobileSmall){
+		background-position: -350px;
+	}
 	// .covid__container
 	&__container {
 	}
 	// .covid__body
 	&__body {
-		position: absolute;
-		left: 50%;
-		transform: translateX(-50%); //либо translate(X,Y);
-
-		padding: 138 0px 138 74px;
 		position: relative;
+		left: 50%;
+		padding: 138px 0 138px 0;
 		z-index: 2;
 		max-width: 562px;
+		@media (max-width:$pc){
+			left: 45%;
+		}
+		@media (max-width:$tablet){
+			left: 25%;
+		}
 		@media (max-width:$mobile){
-			padding: 170px 0px 80px 0px;
-			max-width: 450px;
+			padding: 80px 0px 80px 0px;
+			left: 0;
 		}
 		@media (max-width:$mobileSmall){
-			padding: 120px 0px 40px 0px; 
+			padding: 40px 0px 40px 0px; 
+			max-width: none;
 		}
 	}
+	// .covid__subtitle
+	&__subtitle {
+		font-style: normal;
+		font-weight: 700;
+		font-size: 16px;
+		line-height: 121%;
+		letter-spacing: 1.6px;
+		text-transform: uppercase;
+		color: $white;
+		margin-bottom: 17px;
+	}	
 	// .covid__title
 	&__title {
+		margin: 0;
+		font-style: normal;
+		font-weight: 700;
+		font-size: 48px;
+		line-height: 121%;		
+		color: $white;
+		margin-bottom: 22px;
+		@media (max-width:$mobile){
+			font-size: 44px;
+		}
 	}
 	// .covid__text
 	&__text {
+		font-style: normal;
+		font-weight: 400;
+		font-size: 21px;
+		line-height: 143%;
+		color: $white;
+		margin-bottom: 34px;
 	}
 	// .covid__buttons
 	&__buttons {
+		display: flex;
+		flex-wrap: wrap;
+		align-items: center;
+		gap: 28px;
 	}
 	// .covid__button
 	&__button {
@@ -694,9 +743,31 @@ body {
 	}
 	// .covid__value
 	&__value {
+		font-style: normal;
+		font-weight: 400;
+		font-size: 16px;
+		line-height: 112%;
+		letter-spacing: 1.6px;
+		text-transform: uppercase;
+		text-decoration: none;
+		color: $white;
+		@media (max-width:$mobile){
+			font-size: 14px;
+			color: $white; 
+			line-height: 26px;
+		}
 	}
 	// .covid__phone
 	&__phone {
+		font-style: normal;
+		font-weight: 700;
+		font-size: 28px;
+		line-height: 129%;
+		color: $white;
+		text-decoration: none;
+		@media (max-width:$mobile){
+			font-size: 20px;
+		}
 	}
 }
 .button-quote {
@@ -706,12 +777,209 @@ body {
 .cleaning-home {
 	// .cleaning-home__icon
 	&__icon {
+		text-align: center;
+		align-self: center;
+		grid-row: span 2;
 	}
 }
 .svg-call-dims {
 }
 
 //</COVD>========================================================================================================================================================
+
+//<AREAS>========================================================================================================================================================
+.page {
+	// .page__areas
+	&__areas {
+		margin-bottom: 200px;
+		background-color: $white;
+			@media (max-width:$tablet){
+				margin-bottom: 150px;
+			}
+			@media (max-width:$mobile){
+				margin-bottom: 80px;
+			}
+			@media (max-width:$mobileSmall){
+				margin-bottom: 60px;
+			}
+	}
+}
+.areas {
+	// .areas__container
+	&__container {
+	}
+	// .areas__body
+	&__body {
+	}
+}
+.body {
+	display: flex;
+	align-items: flex-start;
+	@media (max-width:$tablet){
+		flex-wrap: wrap;
+	}
+	// .body__image
+	&__image {
+		flex: 0 0 53%;
+		@media (max-width:$tablet){
+			flex: 0 1 100%;
+			text-align: center;
+		}
+	}
+	// .body__content
+	&__content {
+		flex: 1 1 100%;
+		padding: 60px 0 60px 80px;
+		@media (max-width:$tablet){
+			padding: 30px 0 30px 0;
+		}
+	}
+	// .body__top
+	&__top {
+	}
+	// .body__list
+	&__list {
+	}
+}
+.top-body {
+	// .top-body__title
+	&__title {
+		font-style: normal;
+		font-weight: 700;
+		font-size: 48px;
+		line-height: 121%;
+		color: inherit;
+		margin-top: 0;
+		margin-bottom: 19px;
+	}
+	// .top-body__text
+	&__text {
+		font-style: normal;
+		font-weight: 400;
+		font-size: 18px;
+		line-height: 167%;
+		color: $lightBlue;
+		margin-bottom: 26px;
+	}
+}
+.list-body {
+	// .list-body__list
+	&__list {
+		display: grid;
+		grid-auto-flow: column;
+		grid-template-columns: 147px;
+		grid-template-rows: repeat(4, auto);
+		column-gap: 56px;
+		row-gap: 27px;
+		margin-bottom: 48px;
+		@media (max-width:$mobileSmall){
+			column-gap: 10px;
+		}
+	}
+	// .list-body__item
+	&__item {
+		display: inline-flex;
+		height: 26px;
+		align-items: center;
+
+		padding-left: 32px;
+		background-image: url("@img/areas/IMAGE.svg");
+		background-position: left center;
+		background-size: 26px 26px;
+		background-repeat: no-repeat;
+
+		font-style: normal;
+		font-weight: 700;
+		font-size: 18px;
+		line-height: 111%;
+		color: inherit;
+	}
+}
+.svg-item-list-dims {
+}
+.covid {
+	// .covid__button
+	&__button {
+	}
+}
+.button-quote {
+}
+//</AREAS>========================================================================================================================================================
+
+//<EXPERIENCE>========================================================================================================================================================
+.page {
+	// .page__experience
+	&__experience {
+		margin-bottom: 410px;
+		background-color: $white;
+			@media (max-width:$tablet){
+				margin-bottom: 150px;
+			}
+			@media (max-width:$mobile){
+				margin-bottom: 80px;
+			}
+			@media (max-width:$mobileSmall){
+				margin-bottom: 60px;
+			}
+	}
+}
+.experience {
+	// .experience__container
+	&__container {
+	}
+	// .experience__body
+	&__body {
+	}
+}
+.body {
+	// .body__content
+	&__content {
+	}
+	// .body__top
+	&__top {
+	}
+	// .body__subtitle
+	&__subtitle {
+	}
+	// .body__experience
+	&__experience {
+	}
+	// .body__item
+	&__item {
+	}
+	// .body__value
+	&__value {
+	}
+	// .body__count
+	&__count {
+	}
+	// .body__key
+	&__key {
+	}
+	// .body__image
+	&__image {
+	}
+}
+.top-body {
+	// .top-body__title
+	&__title {
+	}
+	// .top-body__text
+	&__text {
+	}
+}
+.covid {
+	// .covid__buttons
+	&__buttons {
+	}
+	// .covid__button
+	&__button {
+	}
+}
+.button-quote {
+}
+//</EXPERIENCE>========================================================================================================================================================
+
 
 //</ОСНОВНОЙ БЛОК>==============================================================================================================================================================================================================================================================================================
 
