@@ -129,8 +129,8 @@ import "./files/burger.js";
 
 // Функционал добавления классов к хедеру при прокрутке
 // Документация: https://template.fls.guru/template-docs/modul-dobavleniya-klassov-k-shapke-pri-prokrutke-stranicy.html
-import { headerScroll } from "./files/scroll/header-scroll.js";
-headerScroll();
+// import { headerScroll } from "./files/scroll/header-scroll.js";
+// headerScroll();
 
 // Функционал липкого блока (ФРИЛАНСЕР, ДОРАБОТАТЬ)
 // flsScroll.stickyBlock();
