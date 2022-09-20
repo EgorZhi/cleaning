@@ -57,7 +57,7 @@ jQuery(document).ready(function () {
     // Когда мы прокручиваем страницу, происходит проверка, сколько пикселей скрыто, и сравнивает их с числом. В нашем случае это количество до 300.
     // Если мы пройдем 300px, то мы добавим класс show к нашей кнопке, который заставит её появиться. Если число меньше 300, мы удаляем этот класс. 
     $(window).scroll(function() {     
-      if ($(window).scrollTop() > 300) {
+      if ($(window).scrollTop() > 800) {
          btn.addClass('show');
        } else {
          btn.removeClass('show');
@@ -65,6 +65,6 @@ jQuery(document).ready(function () {
      });
      btn.on('click', function(e) {
        e.preventDefault();
-       $('html, body').animate({scrollTop:0}, '300');
+       $('html, body').animate({scrollTop:0}, '800');
      });
   });

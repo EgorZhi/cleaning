@@ -1,15 +1,15 @@
 //====================================================================================================
 .footer {
-    padding: 140px 0;
+    padding: 140px 0 20px 0;
     background-color: $white;
         @media (max-width:$tablet){
-            padding: 100px 0;
+            padding: 100px 0 20px 0;
         }
         @media (max-width:$mobile){
-            padding: 60px 0;
+            padding: 60px 0 20px 0;
         }
         @media (max-width:$mobileSmall){
-            padding: 40px 0;
+            padding: 40px 0 20px 0;
         }
     // .footer__container
     &__container {

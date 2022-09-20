@@ -1,5 +1,5 @@
 // Подключение плагина из node_modules
-import SimpleBar from 'simplebar';
+import SimpleBar from 'simplebar'
 // Подключение стилей из node_modules
 import 'simplebar/dist/simplebar.css';
 
